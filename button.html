@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Buttons</title>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'GA_MEASUREMENT_ID');
+	</script>
+</head>
+<body>
+	<h1>Color Buttons</h1>
+	<button id="red" onclick="trackEvent('Red')">Red</button>
+	<button id="blue" onclick="trackEvent('Blue')">Blue</button>
+	<button id="green" onclick="trackEvent('Green')">Green</button>
+	<button id="yellow" onclick="trackEvent('Yellow')">Yellow</button>
+	<button id="purple" onclick="trackEvent('Purple')">Purple</button>
+
+	<script>
+		function trackEvent(color) {
+			gtag('event', 'click', {
+				'event_category': 'Color Buttons',
+				'event_label': color
+			});
+		}
+	</script>
+</body>
+</html>
